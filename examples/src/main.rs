@@ -83,3 +83,15 @@ rouille::rouille! {
         oups!("fetchez la vache"); // in SFW contexts
     }
 }
+
+use tukku_rust_macro::kannada;
+
+kannada! {
+    ಸಾರ್ವಜನಿಕ ಕಾರ್ಯ ಮುಖ್ಯ() {
+        ಮಾಡು x = 42;
+        ಯದಿ x > 0 {
+            println!("ಧನಾತ್ಮಕ");
+        }
+    }
+}
+use tukku_rust_macro::kannada;
