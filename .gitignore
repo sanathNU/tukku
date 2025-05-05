@@ -2,3 +2,8 @@
 */target
 /target
 Cargo.lock
+# SpecStory explanation file
+.specstory/
+.cursorindexingignore
+# SpecStory explanation file
+.specstory/.what-is-this.md
