@@ -1,9 +1,14 @@
 [package]
-name = "rouille_examples"
+name = "tukku_examples"
 version = "0.1.0"
-edition = "2018"
+edition = "2024"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-rouille = { path = "../rouille_proc_macro/" }
+
+tukku_rust_macro = { path = "../tukku_rust_macro/"}
+
+[[example]]
+name = "main"
+path = "src/main.rs"

@@ -1,7 +1,7 @@
 use tukku_rust_macro::kannada;
 
 fn main() {
-    kannada! {
+     kannada! {
         ಸಾರ್ವಜನಿಕ ಕಾರ್ಯ ಮುಖ್ಯ() {
             ಮಾಡು x = 42;
             ಯದಿ x > 0 {

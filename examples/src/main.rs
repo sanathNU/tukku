@@ -1,97 +1,60 @@
-rouille::rouille! {
-    externe cagette rouille;
+use tukku_rust_macro::kannada;
 
-    utilisons std::collections::Dictionnaire comme Dico;
-
-    convention CléValeur {
-        fonction écrire(&soi, clé: Chaîne, valeur: Chaîne);
-        fonction lire(&soi, clé: Chaîne) -> Résultat<PeutÊtre<&Chaîne>, Chaîne>;
+fn main() {
+    // Basic arithmetic example
+    kannada! {
+        ಸಾರ್ವಜನಿಕ ಕಾರ್ಯ ಗುಣಾಕಾರ() {
+            ಮಾಡು x = 5;
+            ಮಾಡು y = 3;
+            ಮಾಡು ಫಲಿತಾಂಶ = x * y;
+            println!("ಗುಣಾಕಾರ: {} * {} = {}", x, y, ಫಲಿತಾಂಶ);
+        }
     }
 
-    statique mutable DICTIONNAIRE: PeutÊtre<Dico<Chaîne, Chaîne>> = Rien;
-
-    structure Concrète;
-
-    réalisation CléValeur pour Concrète {
-        fonction écrire(&soi, clé: Chaîne, valeur: Chaîne) {
-            soit dico = dangereux {
-                DICTIONNAIRE.prendre_ou_insérer_avec(Défaut::défaut)
-            };
-            dico.insérer(clé, valeur);
-        }
-        fonction lire(&soi, clé: Chaîne) -> Résultat<PeutÊtre<&Chaîne>, Chaîne> {
-            si soit Quelque(dico) = dangereux { DICTIONNAIRE.en_réf() } {
-                Bien(dico.lire(&clé))
-            } sinon {
-                Arf("fetchez le dico".vers())
+    // Loop example
+    kannada! {
+        ಸಾರ್ವಜನಿಕ ಕಾರ್ಯ ಲೂಪ್() {
+            ಮಾಡು ಮೊತ್ತ = 0;
+            ಮಾಡು i = 1;
+            ಯಾವಾಗ i <= 5 {
+                ಮೊತ್ತ = ಮೊತ್ತ + i;
+                i = i + 1;
             }
+            println!("ಮೊತ್ತ: {}", ಮೊತ್ತ);
         }
     }
 
-    public(cagette) fonction peut_etre(i: u32) -> PeutÊtre<Résultat<u32, Chaîne>> {
-        si i % 2 == 1 {
-            si i == 42 {
-                Quelque(Arf(Chaîne::depuis("merde")))
-            } sinon {
-                Quelque(Bien(33))
-            }
-        } sinon {
-            Rien
+    // Function with parameters
+    kannada! {
+        ಸಾರ್ವಜನಿಕ ಕಾರ್ಯ ವರ್ಗ_ಫಲಿತಾಂಶ(ಸಂಖ್ಯೆ: i32) -> i32 {
+            ಸಂಖ್ಯೆ * ಸಂಖ್ಯೆ
         }
     }
 
-    asynchrone fonction exemple() {
-    }
-
-    asynchrone fonction exemple2() {
-        exemple().attend;
-    }
-
-    fonction principale() {
-        soit mutable x = 31;
-
-        selon x {
-            42 => {
-                affiche!("omelette du fromage")
-            }
-            _ => affiche!("voila")
+    // Run all examples
+    kannada! {
+        ಸಾರ್ವಜನಿಕ ಕಾರ್ಯ ಮುಖ್ಯ() {
+            println!("ಗುಣಾಕಾರ ಉದಾಹರಣೆ:");
+            ಗುಣಾಕಾರ();
+            
+            println!("\nಲೂಪ್ ಉದಾಹರಣೆ:");
+            ಲೂಪ್();
+            
+            println!("\nವರ್ಗ ಉದಾಹರಣೆ:");
+            ಮಾಡು ಸಂಖ್ಯೆ = 4;
+            println!("{} ನ ವರ್ಗ: {}", ಸಂಖ್ಯೆ, ವರ್ಗ_ಫಲಿತಾಂಶ(ಸಂಖ್ಯೆ));
         }
-
-        pour i de 0..10 {
-            soit val = boucle {
-                arrête i;
-            };
-
-            tant que x < val {
-                x += 1;
-            }
-
-            x = si soit Quelque(resultat) = peut_etre(i) {
-                resultat.déballer()
-            } sinon {
-                12
-            };
-        }
-
-        //secondaire();
-    }
-
-    #[légal(code_inaccessible)]
-    fonction secondaire() {
-        merde!("oh non"); // for the true French experience
-        calisse!("tabernacle"); // for friends speaking fr-ca
-        oups!("fetchez la vache"); // in SFW contexts
     }
 }
 
-use tukku_rust_macro::kannada;
 
-kannada! {
-    ಸಾರ್ವಜನಿಕ ಕಾರ್ಯ ಮುಖ್ಯ() {
-        ಮಾಡು x = 42;
-        ಯದಿ x > 0 {
-            println!("ಧನಾತ್ಮಕ");
-        }
-    }
-}
-use tukku_rust_macro::kannada;
+// fn main() {
+//     kannada! {
+//         ಸಾರ್ವಜನಿಕ ಕಾರ್ಯ ಮುಖ್ಯ() {
+//             ಮಾಡು x = 42;
+//             ಯದಿ x > 0 {
+//                 println!("ಧನಾತ್ಮಕ");
+//             }
+//         }
+//     }
+// }
