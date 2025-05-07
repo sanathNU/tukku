@@ -8,16 +8,6 @@ Then **Tukku** (ತುಕ್ಕು), which is the Kannada word for Rust (ತು�
 
 Don't worry! ತುಕ್ಕು, the Kannada Rust, is fully compatible with standard English-Rust. So you can easily mix and match (ಬೆರೆಸಿ ಬಳಸಬಹುದು) both in your projects, using the power of Rust with the beauty of Kannada.
 
-## Getting Started
-
-The project is now using the Kannada branch (ಮುಖ್ಯ) as the main branch. To get started:
-
-```bash
-git clone https://github.com/sanathNU/tukku.git
-cd tukku
-git checkout ಮುಖ್ಯ  # Switch to the Kannada branch
-```
-
 ### Available Kannada Keywords
 
 Here are some of the Kannada keywords you can use in your Rust code:
@@ -52,6 +42,9 @@ kannada! {
 
 See the [examples](./examples/src/main.rs) to get a rough sense of the whole
 syntax. ಅಷ್ಟೇ, that's it.
+
+If you want to show some simple examples run
+`cargo run --example main`
 
 ## Contributions (ಕೊಡುಗೆಗಳು)
 
