@@ -24,6 +24,11 @@ fn replace_ident(ident: Ident) -> Option<TokenTree> {
         "ಸೂಪರ್" => "super",
         "ಸ್ಥಿರ" => "static",
         "ಸ್ಥಿರಾಂಕ" => "const",
+        "ಮುಖ್ಯ" => "main",
+        "ಯಾವಾಗ" => "while",
+        "ಬದಲಾಯಿಸಬಹುದಾದ" => "mut",
+        "ಬದಲು" => "mut",
+        "ಮುದ್ರಿಸು" => "println",
         _ => &ident_str,
     };
 
