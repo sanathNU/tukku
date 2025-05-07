@@ -1,4 +1,4 @@
-Tukku (ತುಕ್ಕು) 
+# Tukku (ತುಕ್ಕು) 
 
 ![](rust_pic.jpeg)
 
@@ -7,6 +7,46 @@ Aren't you tired (ಸುಸ್ತಾಗಿದ್ದೀರಾ?) of writing Rust p
 Then **Tukku** (ತುಕ್ಕು), which is the Kannada word for Rust (ತುಕ್ಕು), is here to save your day! It lets you write Rust programs using ಕನ್ನಡ – that means using ಕನ್ನಡ keywords, and perhaps adopting some Kannada-style function names or idioms (ಕನ್ನಡದ ವಿಶಿಷ್ಟ ಶೈಲಿ!).
 
 Don't worry! ತುಕ್ಕು, the Kannada Rust, is fully compatible with standard English-Rust. So you can easily mix and match (ಬೆರೆಸಿ ಬಳಸಬಹುದು) both in your projects, using the power of Rust with the beauty of Kannada.
+
+## Getting Started
+
+The project is now using the Kannada branch (ಮುಖ್ಯ) as the main branch. To get started:
+
+```bash
+git clone https://github.com/sanathNU/tukku.git
+cd tukku
+git checkout ಮುಖ್ಯ  # Switch to the Kannada branch
+```
+
+### Available Kannada Keywords
+
+Here are some of the Kannada keywords you can use in your Rust code:
+
+- `ಸಾರ್ವಜನಿಕ` → `pub` (public)
+- `ಕಾರ್ಯ` → `fn` (function)
+- `ಮಾಡು` → `let` (let)
+- `ಯದಿ` → `if` (if)
+- `ಅಥವಾ` → `else` (else)
+- `ರಚನೆ` → `struct` (struct)
+- `ವರ್ಗ` → `enum` (enum)
+- `ಬದಲು` → `mut` (mutable)
+- `ಮುದ್ರಿಸು` → `println!` (print)
+- `ಯಾವಾಗ` → `while` (while)
+- `ಮುಖ್ಯ` → `main` (main)
+
+### Example Usage
+
+```rust
+kannada! {
+    ಸಾರ್ವಜನಿಕ ಕಾರ್ಯ ಮುಖ್ಯ() {
+        ಮಾಡು ಬದಲು x = 5;
+        ಯಾವಾಗ x > 0 {
+            ಮುದ್ರಿಸು!("ಧನಾತ್ಮಕ");
+            x = x - 1;
+        }
+    }
+}
+```
 
 ### Other examples
 
@@ -17,7 +57,7 @@ syntax. ಅಷ್ಟೇ, that's it.
 
 First of all ಧನ್ಯವಾದಗಳು, for considering participating in this... ಸಂತೋಷಕರ project! 
 
-Feel free to throw in a few Kannada ಗುರುತುಗಳು or sprinkle some Kannada ಸೊಗಡು here and there in the code. Once you have something, open a pull-request against the principle branch (that's the main branch / ಮುಖ್ಯ ಬ್ರಾಂಚ್).
+Feel free to throw in a few Kannada ಗುರುತುಗಳು or sprinkle some Kannada ಸೊಗಡು here and there in the code. Once you have something, open a pull-request against the ಮುಖ್ಯ branch (that's the main branch).
 
 Please don't introduce swear words, though. ನಮ್ಮ 'ತುಕ್ಕು' ಕೋಡಿನಲ್ಲಿ ಅಂತಹ ಶಬ್ದಗಳು ಒಂಥರಾ ವಿಚಿತ್ರವಾಗಿ ಕೇಳಿಸುತ್ತವೆ! (Such words sound somewhat weird in our 'Tukku' code!)
 
@@ -29,7 +69,7 @@ Please don't introduce swear words, though. ನಮ್ಮ 'ತುಕ್ಕು' �
 
 ## Other languages
 
-This is obvsiouly not going to be updated, and stuck to mid 2025, but these are some other flavours you can enjoy!
+Here are some other language flavors of Rust you can enjoy!
 - Dutch: [roest](https://github.com/jeroenhd/roest)
 - German: [rost](https://github.com/michidk/rost)
 - Polish: [rdza](https://github.com/phaux/rdza)
