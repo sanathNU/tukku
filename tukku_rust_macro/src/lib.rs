@@ -29,6 +29,15 @@ fn replace_ident(ident: Ident) -> Option<TokenTree> {
         "ಬದಲಾಯಿಸಬಹುದಾದ" => "mut",
         "ಬದಲು" => "mut",
         "ಮುದ್ರಿಸು" => "println",
+        "ಐಚ್ಛಿಕ" => "Option",
+        "ಫಲಿತಾಂಶ" => "Result",
+        "ಕೆಲವು" => "Some",
+        "ಯಾವುದೂಇಲ್ಲ" => "None",
+        "ಸರಿ" => "Ok",
+        "ತಪ್ಪು" => "Err",
+        "ಪ್ರತಿ" => "for",
+        "ಒಳಗೆ" => "in",
+        "ಪರಿಕ್ರಮೆ" => "loop",
         _ => &ident_str,
     };
 
